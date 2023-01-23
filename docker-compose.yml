@@ -3,8 +3,7 @@ services:
   api-cabonorte:
     container_name: api-cabonorte
     image: api
-    build:
-      context: api
+    build: .
     restart: unless-stopped
     volumes:
       - img-data:/usr/src/app/public/uploads
