@@ -18,7 +18,7 @@ const crearProductos = async(req, res = response) => {
  
     try {
     const productSave = new Producto( req.body );
-
+    await productSave.save();
       res.json({
         ok: true,
         productSave

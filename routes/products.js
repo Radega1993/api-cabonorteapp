@@ -10,9 +10,9 @@ const {validarJWT} = require('../middlewares/validar-jwt');
 const router = Router();
 
 
-router.get('/', validarJWT, getProductos );
+router.get('/', getProductos );
 
-router.post('/', validarJWT, crearProductos );
+router.post('/', crearProductos );
 
 router.put('/:id', validarJWT, actualizarProductos );
 
