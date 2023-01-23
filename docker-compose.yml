@@ -2,7 +2,7 @@ version : '3'
 services:
   api-cabonorte:
     container_name: api-cabonorte
-    image: api
+    image: api-cabonorte
     build: .
     restart: unless-stopped
     volumes:
