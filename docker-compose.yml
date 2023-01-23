@@ -1,0 +1,25 @@
+version : '3'
+services:
+  api-cabonorte:
+    container_name: api-cabonorte
+    image: api
+    build:
+      context: api
+    restart: unless-stopped
+    volumes:
+      - img-data:/usr/src/app/public/uploads
+    labels:
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:cabonorte-api.paraanime.com
+      - traefik.port=3006
+      - traefik.docker.network=traefik-ok_default
+      - traefik.frontend.protocol=http
+      - traefik.frontend.entryPoints=http,https
+    networks:
+      - traefik-ok_default
+volumes:
+  img-data:
+    driver: local
+networks:
+  traefik-ok_default:
+    external: true
