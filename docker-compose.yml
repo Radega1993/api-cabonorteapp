@@ -8,6 +8,8 @@ services:
       - PORT=${PORT}
       - DB_CNN=${DB_CNN}
       - SECTER_JWT_SEED=${SECTER_JWT_SEED}
+    env_file:
+      - .env
     restart: unless-stopped
     volumes:
       - img-data:/usr/src/app/public/uploads
