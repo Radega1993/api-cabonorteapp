@@ -6,6 +6,10 @@ const UsuarioSchema = Schema({
         type: String,
         required: true
     },
+    surname: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true,
@@ -14,6 +18,42 @@ const UsuarioSchema = Schema({
     password: {
         type: String,
         required: true
+    },
+    telefono: {
+        type: String,
+        required: false
+    },
+    via: {
+        type: String,
+        required: true
+    },
+    calle: {
+        type: String,
+        required: true
+    },
+    numero: {
+        type: Number,
+        required: true
+    },
+    escalera: {
+        type: String,
+        required: false
+    },
+    planta: {
+        type: String,
+        required: false
+    },
+    puerta: {
+        type: String,
+        required: false
+    },
+    poblacion: {
+        type: String,
+        required: true
+    },
+    pais: {
+        type: String,
+        required: true,
     },
 });
 
