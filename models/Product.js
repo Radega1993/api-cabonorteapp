@@ -29,6 +29,10 @@ const productSchema = new mongoose.Schema({
       type: String,
       required: true
   },
+  antioxidantes: {
+    type: String,
+    required: false
+},
   imagenURL: {
     type: String,
     required: true
