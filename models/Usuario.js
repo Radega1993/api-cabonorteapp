@@ -1,5 +1,10 @@
 const {Schema, model} = require('mongoose');
 
+let rolesValidos = {
+    values: ['ADMIN_ROLE', 'USER_ROLE'],
+    message: '{VALUE} no es un rol valido'
+};
+
 const UsuarioSchema = Schema({
 
     name: {
@@ -55,6 +60,11 @@ const UsuarioSchema = Schema({
         type: String,
         required: true,
     },
+    role: {
+        type: String,
+        default: 'USER_ROLE',
+        enum: rolesValidos
+    }
 });
 
 
